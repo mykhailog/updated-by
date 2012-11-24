@@ -10,7 +10,7 @@ module SetCurrentUser
   private
 
   def set_current_user
-    User.current_user = current_user if defined?(current_user)
+    User.current_user = current_user if defined?(current_user) rescue nil
   end
 end
 
